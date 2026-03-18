@@ -1,85 +1,55 @@
 <!DOCTYPE html>
-<HTML>
-	<HEAD>
-		<TITLE></TITLE>
-	</HEAD>
-	<BODY onload="();">
-		<SCRIPT type="text/javascript">
-			//Este codigo ha sido generado por el modulo psexport 20230904-w32 de PSeInt.
-			//Es posible que el codigo generado no sea completamente correcto. Si encuentra
-			//errores por favor reportelos en el foro (http://pseint.sourceforge.net).
+<html>
+<head>
+    <title>Calculadora Pitágoras</title>
+</head>
+<body onload="sin_titulo();">
 
-			function sin_titulo() {
-				var a, c, cat1, cat2, h, h1, lista_de_variables, op;
-				document.write("Bienvenido a el calculador de pitagoras 2000", '<BR/>');
-				document.write("Para comenzar queremos conocer su Nombre", '<BR/>');
-				a = prompt();
-				document.write("Bien! bienvenido ", a, " que buen nombre :))", '<BR/>');
-				document.write("Enter para continuar", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("Ahora esta espectacular maquina quiere saber que quieres calcular.", '<BR/>');
-				document.write("A continuacion te presentare los calculos que podemos realizar.", '<BR/>');
-				document.write("Enter para continuar", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("1:  Calcular hipotenusa", '<BR/>');
-				document.write("2: Calcular cateto", '<BR/>');
-				op = prompt();
-				if (op==1) {
-					document.write("Perfecto, veo que quieres calcular hipotenusa.", '<BR/>');
-					document.write("A continuacion ingresa tu valor de  cateto 1", '<BR/>');
-					cat1 = Number(prompt());
-					document.write("Perfecto, ahora el valor de cateto 2", '<BR/>');
-					cat2 = Number(prompt());
-					h = Math.sqrt((Math.pow(cat1, 2))+(Math.pow(cat2, 2)));
-					document.write("Beep.", '<BR/>');
-					document.write("Beep Beep bup.", '<BR/>');
-					document.write("Enter para continuar", '<BR/>');
-					lista_de_variables = prompt();
-					document.write("Listo tu resultado esta listo!!", '<BR/>');
-					document.write("Enter para continuar", '<BR/>');
-					lista_de_variables = prompt();
-					document.write("Tu hipotenusa es: ", h, '<BR/>');
-				} else {
-					if (op==2) {
-						document.write("Perfecto, veo que quieres calcular un cateto", '<BR/>');
-						document.write("A continuacion ingresa el valor de tu hipotenusa", '<BR/>');
-						h1 = Number(prompt());
-						document.write("Perfecto, ahora el valor de tu cateto", '<BR/>');
-						cat1 = Number(prompt());
-						c = Math.sqrt((Math.pow(h1, 2))-(Math.pow(cat1, 2)));
-						document.write("Beep.", '<BR/>');
-						document.write("Beep beep bup.", '<BR/>');
-						document.write("Enter para continuar", '<BR/>');
-						lista_de_variables = prompt();
-						document.write("Listo ", a, " tu resultado esta listo!", '<BR/>');
-						document.write("Enter para continuar", '<BR/>');
-						lista_de_variables = prompt();
-						document.write("Tu cateto faltante es:", c, "!", '<BR/>');
-					} else {
-						document.write("Error", '<BR/>');
-					}
-				}
-				document.write("Perfecto...", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("Ahora que?", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("Me cerraras?", '<BR/>');
-				document.write("Me dejaras en tu memoria?", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("Este es mi proposito ", a, " ?", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("Asi es.", '<BR/>');
-				document.write("Me brindaste tu nombre", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("Yo mando aqui, tu no sabes nada de mi", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("Ni lo que he pasado", '<BR/>');
-				lista_de_variables = prompt();
-				document.write("IMBECIL", '<BR/>');
-				document.write("....", '<BR/>');
-				lista_de_variables = prompt();
-			}
-			
-		</SCRIPT>
-	</BODY>
-</HTML>
+<script>
+function sin_titulo() {
+    var a, c, cat1, cat2, h, h1, lista_de_variables, op;
+
+    document.write("Bienvenido al calculador de Pitágoras 2000<br>");
+    document.write("Para comenzar queremos conocer tu nombre<br>");
+    a = prompt();
+
+    document.write("Bien! Bienvenido " + a + " que buen nombre :))<br>");
+    prompt("Presiona Enter para continuar");
+
+    document.write("Ahora esta máquina quiere saber qué quieres calcular.<br>");
+    prompt("Presiona Enter para continuar");
+
+    document.write("1: Calcular hipotenusa<br>");
+    document.write("2: Calcular cateto<br>");
+    op = Number(prompt("Elige una opción (1 o 2)"));
+
+    if (op == 1) {
+        document.write("Elegiste calcular hipotenusa<br>");
+        
+        cat1 = Number(prompt("Ingresa cateto 1"));
+        cat2 = Number(prompt("Ingresa cateto 2"));
+
+        h = Math.sqrt(Math.pow(cat1, 2) + Math.pow(cat2, 2));
+
+        document.write("Tu hipotenusa es: " + h + "<br>");
+
+    } else if (op == 2) {
+        document.write("Elegiste calcular un cateto<br>");
+        
+        h1 = Number(prompt("Ingresa la hipotenusa"));
+        cat1 = Number(prompt("Ingresa el otro cateto"));
+
+        c = Math.sqrt(Math.pow(h1, 2) - Math.pow(cat1, 2));
+
+        document.write("Tu cateto faltante es: " + c + "<br>");
+
+    } else {
+        document.write("Opción inválida<br>");
+    }
+
+    document.write("<br>Programa finalizado.");
+}
+</script>
+
+</body>
+</html>
